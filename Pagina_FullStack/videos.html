@@ -1,0 +1,656 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videos de Entrenamiento</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      .container {
+        margin-top: 470px; /* Espacio para el video fijo + margen */
+        padding: 0 15px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h2 {
+        color: #343a40;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        background-color: #6c757d;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .back-button:hover {
+        background-color: #5a6268;
+      }
+      .video-card {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 15px 15px;
+        overflow: hidden;
+      }
+      .video-card iframe {
+        width: 100%;
+        height: 450px;
+        border-radius: 0 0 15px 15px;
+      }
+      h3 {
+        color: #007bff;
+        font-weight: bold;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+      }
+      .col-md-4,
+      .col-lg-3 {
+        flex: 0 0 auto;
+        padding: 0 15px;
+      }
+      .col-md-4 {
+        width: 33.3333%;
+      }
+      .col-lg-3 {
+        width: 25%;
+      }
+      .exercise-button {
+        width: 100%;
+        background-color: #007bff;
+        border: none;
+        border-radius: 10px;
+        padding: 12px;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+        cursor: pointer;
+      }
+      .exercise-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+      @media (max-width: 767px) {
+        .col-md-4 {
+          width: 50%;
+        }
+      }
+      @media (max-width: 991px) {
+        .col-lg-3 {
+          width: 33.3333%;
+        }
+      }
+      @media (max-width: 575px) {
+        .col-md-4,
+        .col-lg-3 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Videos de Entrenamiento</h2>
+
+      <!-- Botón Volver al Inicio -->
+      <a href="/dashboard" class="back-button">Volver al Inicio</a>
+
+      <!-- Sección de Ejercicios por Grupo Muscular -->
+      <div class="mb-5">
+        <h3>Pecho</h3>
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/S7NrsueBHhA')"
+            >
+              Press de banca
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/cWrJFIdTje0')"
+            >
+              Flexiones
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/qpqXWkXh7_Q')"
+            >
+              Aperturas con mancuernas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/zCqpvX8EneU')"
+            >
+              Press inclinado
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/QEW6RO0O-ak')"
+            >
+              Cruces en polea
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/hmqT0p_3BLY')"
+            >
+              Fondos en paralelas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/cJYRrM5cpbo')"
+            >
+              Press declinado
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/r_KKz9i5x-E')"
+            >
+              Pullover con mancuerna
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/ryOSB7evhiI')"
+            >
+              Push-up diamante
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/R3eCn7-9wC0')"
+            >
+              Press con mancuernas
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h3>Piernas</h3>
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/Ur-zj6AiO44')"
+            >
+              Sentadillas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/VLW-vK6ZF94')"
+            >
+              Peso muerto
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/lT-oysQ-qKY')"
+            >
+              Zancadas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/x1JEd6PJ2OA')"
+            >
+              Prensa de piernas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/oQM875T39M4')"
+            >
+              Extensiones de cuádriceps
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/Nps3w-hl3HU')"
+            >
+              Peso muerto sumo
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/JhDqNv2DoAU')"
+            >
+              Elevación de talones
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/8q9LVgN2RD4')"
+            >
+              Step-ups
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/v_nvYjpX-iY')"
+            >
+              Sentadilla frontal
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/Tz1XM1y1aEQ')"
+            >
+              Curl femoral
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h3>Espalda</h3>
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/amSuLWswuI0')"
+            >
+              Dominadas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/sr_U0jBE89A')"
+            >
+              Remo con barra
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/W2x6zP9k7SM')"
+            >
+              Jalón al pecho
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/cA07hN6sUvY')"
+            >
+              Remo con mancuerna
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/VLW-vK6ZF94')"
+            >
+              Peso muerto rumano
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/4o8scFhoDdE')"
+            >
+              Remo en máquina
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/IeOqdw9ZfI90')"
+            >
+              Face pull
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/r4k1Wm_RjGc')"
+            >
+              Pull-over con barra
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/vZ65hayXv9k')"
+            >
+              Hiperextensiones
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/qwbHWsm0EPw')"
+            >
+              Jalón tras nuca
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h3>Brazos</h3>
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/C3qnIazrNFI')"
+            >
+              Curl de bíceps con mancuernas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/23qUSrn8lIU')"
+            >
+              Extensiones de tríceps en polea
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/1pTUHKXGaSs')"
+            >
+              Martillo con mancuernas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/BTkLgHG7kzo')"
+            >
+              Press francés
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/QejmaMkb7eo')"
+            >
+              Curl de bíceps con barra
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/W-CYc8UVPNw')"
+            >
+              Dips para tríceps
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/oI7LxnEFmZU')"
+            >
+              Curl concentrado
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/8GkV8XvGev4')"
+            >
+              Extensiones sobre la cabeza
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/WnDxMH-adp8')"
+            >
+              Curl martillo con barra
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/XJV627mCN3s')"
+            >
+              Kickback de tríceps
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h3>Hombros</h3>
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/895PvlhMpTQ')"
+            >
+              Press militar
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/HFf5WDmtHuE')"
+            >
+              Elevaciones laterales
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/HciAFZSN2Qo')"
+            >
+              Elevaciones frontales
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/QgokS_HikVo')"
+            >
+              Encogimientos de hombros
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/ex_G8ddt_8U')"
+            >
+              Remo al mentón
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/qZqK_ZjV7lo')"
+            >
+              Press Arnold
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/kPn1dUB8KDs')"
+            >
+              Elevaciones traseras
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/ugBH8iGcDVY')"
+            >
+              Rotaciones externas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/XNxzAWnkvH0')"
+            >
+              Plancha con elevación
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h3>Abdomen</h3>
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/3AM7L2k7BEw')"
+            >
+              Plancha
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/dNuGXV0nXGA')"
+            >
+              Crunches
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/OtP14FBny08')"
+            >
+              Elevaciones de piernas
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/-cPtvFdT8dc')"
+            >
+              Russian twists
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/TvILqQEdf00')"
+            >
+              Bicicleta abdominal
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/xyaLDfd9ZfI')"
+            >
+              Plancha lateral
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/7W4JEfEKuC4')"
+            >
+              Mountain climbers
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/kISuoI7QCYk')"
+            >
+              Ab rollouts
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/Gw_3oAQyHXA')"
+            >
+              Leg raises colgando
+            </button>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <button
+              class="exercise-button"
+              onclick="loadVideo('https://www.youtube.com/embed/JinLnX6C1tU')"
+            >
+              Vacío abdominal
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección del Video (Fija) -->
+    <div class="video-card">
+      <iframe
+        id="videoFrame"
+        width="100%"
+        height="450"
+        src="https://www.youtube.com/embed/S7NrsueBHhA"
+        title="Video de entrenamiento por defecto (Press de banca)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <script>
+      function loadVideo(url) {
+        const iframe = document.getElementById("videoFrame");
+        iframe.src = url;
+      }
+    </script>
+  </body>
+</html>
