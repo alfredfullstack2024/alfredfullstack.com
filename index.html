@@ -977,43 +977,46 @@
       <div class="container">
         <div id="client-slider" class="owl-carousel">
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/1.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/1.png" class="img-responsive" alt="Cliente 1" /></a>
           </div>
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/2.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/2.png" class="img-responsive" alt="Cliente 2" /></a>
           </div>
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/3.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/3.png" class="img-responsive" alt="Cliente 3" /></a>
           </div>
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/4.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/4.png" class="img-responsive" alt="Cliente 4" /></a>
           </div>
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/5.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/5.png" class="img-responsive" alt="Cliente 5" /></a>
           </div>
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/6.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/6.png" class="img-responsive" alt="Cliente 6" /></a>
           </div>
           <div class="item client-logo">
-            <a href="#"
-              ><img src="images/clients/7.png" class="img-responsive" alt=""
-            /></a>
+            <a href="#"><img src="images/clients/7.png" class="img-responsive" alt="Cliente 7" /></a>
+          </div>
+          <div class="item client-logo">
+            <a href="#"><img src="images/clients/8.png" class="img-responsive" alt="Cliente 8" /></a>
+          </div>
+          <div class="item client-logo">
+            <a href="#"><img src="images/clients/9.png" class="img-responsive" alt="Cliente 9" /></a>
+          </div>
+          <div class="item client-logo">
+            <a href="#"><img src="images/clients/10.png" class="img-responsive" alt="Cliente 10" /></a>
           </div>
         </div>
       </div>
     </div>
+    ```
+
+### ¿Por qué esto lo soluciona?
+1.  **Estructura Lineal:** Ahora cada imagen está dentro de su propio `div class="item client-logo"`, que es lo que el componente `owl-carousel` necesita para contar los elementos correctamente.
+2.  **Cierre de Etiquetas:** Se eliminaron las etiquetas duplicadas de `container` y `client-slider` que tenías pegadas una dentro de otra.
+3.  **Rutas Verificadas:** Según la captura de tu explorador de archivos, la carpeta se llama `clientela`, pero en tu código HTML las buscas en `images/clients/`. **Asegúrate de que el nombre de la carpeta en tu servidor coincida con el del código.**
+
+**Nota final:** Después de guardar los cambios, recuerda limpiar la caché de tu navegador (`Ctrl + F5`) para ver los 10 logos en movimiento.
     <!--Contact-Section-Start-->
     <section id="contact">
       <div class="container">
