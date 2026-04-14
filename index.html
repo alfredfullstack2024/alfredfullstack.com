@@ -1009,14 +1009,9 @@
         </div>
       </div>
     </div>
-    ```
+    
 
-### ¿Por qué esto lo soluciona?
-1.  **Estructura Lineal:** Ahora cada imagen está dentro de su propio `div class="item client-logo"`, que es lo que el componente `owl-carousel` necesita para contar los elementos correctamente.
-2.  **Cierre de Etiquetas:** Se eliminaron las etiquetas duplicadas de `container` y `client-slider` que tenías pegadas una dentro de otra.
-3.  **Rutas Verificadas:** Según la captura de tu explorador de archivos, la carpeta se llama `clientela`, pero en tu código HTML las buscas en `images/clients/`. **Asegúrate de que el nombre de la carpeta en tu servidor coincida con el del código.**
 
-**Nota final:** Después de guardar los cambios, recuerda limpiar la caché de tu navegador (`Ctrl + F5`) para ver los 10 logos en movimiento.
     <!--Contact-Section-Start-->
     <section id="contact">
       <div class="container">
