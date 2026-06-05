@@ -1372,3 +1372,7 @@ color:#fff;
 #about .row{
     margin-bottom:50px;
 }
+html, body {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
