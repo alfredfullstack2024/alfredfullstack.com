@@ -1352,3 +1352,23 @@ color:#fff;
 }
 
 /*Basic-Stylesheets-End-Here*/
+/* ==========================
+   ABOUT BANNERS
+========================== */
+
+.about-banner{
+    width: 70%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+    border-radius: 15px;
+}
+
+/* separación entre imágenes */
+.about-banner + .about-banner{
+    margin-top: 60px;
+}
+#about .row{
+    margin-bottom:50px;
+}
