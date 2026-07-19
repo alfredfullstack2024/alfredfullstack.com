@@ -1399,13 +1399,15 @@ color:#fff;
 
     z-index:2;
 
-    width:70%;
+    width:95%;
 
-    max-width:1000px;
+    max-width:1400px;
+
+    height:auto;
 
     display:block;
 
-    margin:35px auto;
+    margin:40px auto;
 
     border-radius:18px;
 
