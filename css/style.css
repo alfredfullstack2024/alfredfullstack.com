@@ -390,10 +390,47 @@ ul.nav li.active a:before {
 	transition: all 0.5s ease-in-out 0.45s;
 }
 /*About-stylesheets-include-here*/
-#about {
-	padding:3% 0%;
+#about{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:90px 0;
+
+    background:linear-gradient(
+        180deg,
+        #020202 0%,
+        #071221 45%,
+        #020202 100%
+    );
+
 }
-#about .heading {
+
+#about::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background-image:
+        radial-gradient(rgba(0,170,255,.10) 1px, transparent 1px);
+
+    background-size:35px 35px;
+
+    opacity:.30;
+
+    pointer-events:none;
+
+}#about .heading {
 	text-align:center;
 }
 .heading h2 {
@@ -1357,14 +1394,28 @@ color:#fff;
 ========================== */
 
 .about-banner{
-    width: 70%;
-    max-width: 1000px;
-    height: auto;
-    display: block;
-    margin: 40px auto;
-    border-radius: 15px;
-}
 
+    position:relative;
+
+    z-index:2;
+
+    width:70%;
+
+    max-width:1000px;
+
+    display:block;
+
+    margin:35px auto;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 35px rgba(0,170,255,.25);
+
+    transition:.35s;
+
+}
 /* separación entre imágenes */
 .about-banner + .about-banner{
     margin-top: 60px;
